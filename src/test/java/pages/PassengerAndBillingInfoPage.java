@@ -86,18 +86,14 @@ public class PassengerAndBillingInfoPage {
 
     private void fill_passenger_names() {
         FlightInfo flightinfo = new FlightInfo();
-        System.out.println(flightinfo.getNumPassegers());
         String fnp = "";
         String lnp = "";
         String pmeal = "";
 
         for (int i = 0; i<flightinfo.getNumPassegers(); i++) {
             fnp = "passFirst" + i;
-            System.out.println(fnp);
             lnp = "passLast" + i;
-            System.out.println(lnp);
             pmeal = "pass." + i + ".meal";
-            System.out.println(pmeal);
 
             driver.findElement(By.name(fnp)).sendKeys(flightinfo.createRandomName());
             driver.findElement(By.name(lnp)).sendKeys(flightinfo.createRandomName());

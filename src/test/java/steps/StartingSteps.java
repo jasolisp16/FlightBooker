@@ -9,7 +9,8 @@ public class StartingSteps extends DriverFactory {
 
     @Before
     public void presetup() {
-        System.setProperty("webdriver.gecko.driver", "C:\\webDriver\\geckodriver.exe");
+        String projectLocation = getProjectPath();
+        System.setProperty("webdriver.gecko.driver", projectLocation+"\\src\\lib\\geckodriver\\geckodriver.exe");
         driver = new FirefoxDriver();
     }
 
